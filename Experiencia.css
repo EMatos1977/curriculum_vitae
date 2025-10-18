@@ -1,0 +1,97 @@
+body{
+    color: inherit;
+    background-color: #0d1117;
+
+}
+
+#certificaciones-tecnicas{
+    color: rgb(229, 18, 18);
+    padding: 20px;
+    font-family: arial, sans-serif;
+    
+    
+}
+
+.cert-Dweb{
+    color: #2918e3;
+    font-size: 1.1em;
+    margin-bottom: 8px;/*color azul para destacar la seccion*/
+    margin-bottom: 15px;
+
+}
+
+.cert-logica{
+    color: white;
+    padding-bottom: 5px;
+    margin-bottom: 15px;
+    
+
+}
+
+.cert-front{
+    color: white;
+}
+
+.cert-BE{
+    color: white;
+}
+
+.cert-infra{
+    color: #2918e3;
+}
+
+.cert-categoria1{
+    color: white;
+}
+
+.cert-categoria2{
+    color: white;
+}
+.cert-categoria21{
+    color: white;
+    
+}
+
+.diplomado-categoria1{
+    color: blue;
+}
+.diplomado-categoria2{
+    color:blue;
+}
+
+.diplomado-categoria2{
+    color: white;
+}
+.encabezado{
+    color: blue;
+}
+
+.cert-categoria2{
+    color: white;
+}
+.seccion-idiomas{
+    color: blue;
+}
+
+.cert-category li, .cert-area > ul li{
+    background-size: 16px 16px;
+    padding-left: 25px; /*Espacion para el Icono*/
+    margin-bottom: 8px;
+    line-height: 1.4;
+
+}
+
+.cert-category ul{
+    padding-left: 20px; /*Indenta un poco las listas*/
+}
+
+/* ingles */
+    
+/* Estilos para el título "Idiomas" */
+.seccion-idiomas h2 {
+  color: white; /* Un color azul oscuro similar al de la imagen */
+  font-family: sans-serif; /* Usa la fuente que prefieras */
+  font-size: 24px;
+  margin-bottom: 5px;
+}
+

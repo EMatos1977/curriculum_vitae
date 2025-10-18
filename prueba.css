@@ -1,0 +1,192 @@
+/* Reseteo Básico */
+body, h1, h2, p, ul, ol, li, a {
+    margin: 0;
+    padding: 0;
+    text-decoration: none;
+    list-style: none;
+    color: inherit; /* Hereda el color del padre para enlaces por defecto */
+}
+
+.imagen{
+    width: 210px;
+    height: 350px;
+    padding: 40px;
+
+
+}
+
+/* Variables de Color (para facilitar cambios) */
+:root {
+    --bg-color: #0d1117; /* Fondo principal */
+    --text-color-primary: #f0f6fc; /* Texto principal (títulos) */
+    --text-color-secondary: #c9d1d9; /* Texto de párrafo */
+    --text-color-tertiary: #8b949e; /* Texto más sutil (tagline, enlaces inactivos) */
+    --accent-color: #58a6ff; /* Color de acento (líneas, hover, strong) */
+    --social-icon-color: #8b949e;
+}
+
+/* Estilos Globales */
+body {
+    font-family: 'Inter', sans-serif; /* Fuente similar a la del ejemplo */
+    background-color: var(--bg-color);
+    color: var(--text-color-secondary);
+    line-height: 1.6;
+    display: flex;
+    justify-content: center;
+    align-items: flex-start; /* Alinea al inicio, no al centro vertical */
+    min-height: 100vh; /* Asegura que ocupe toda la altura */
+    padding: 3rem 0; /* Padding superior e inferior general */
+    background-image: radial-gradient(at 27% 37%, rgba(13, 17, 23, 0.4) 0px, transparent 20%), 
+                      radial-gradient(at 100% 15%, rgba(46, 94, 166, 0.2) 0px, transparent 20%), 
+                      radial-gradient(at 0% 100%, rgba(13, 17, 23, 0.4) 0px, transparent 20%), 
+                      radial-gradient(at 80% 80%, rgba(46, 94, 166, 0.2) 0px, transparent 20%); /* Degradado sutil */
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+}
+
+/* Layout Principal (Dos Columnas) */
+.main-layout {
+    display: grid;
+    grid-template-columns: 1fr 1.5fr; /* Columna izquierda más pequeña, derecha más grande */
+    gap: 5rem; /* Espacio entre columnas */
+    max-width: 1200px; /* Ancho máximo similar al del ejemplo */
+    width: 90%; /* Ancho responsivo */
+    margin: auto; /* Centrar el layout */
+}
+
+/* Columna Izquierda (Sidebar) */
+.sidebar-left {
+    position: sticky; /* Se mantiene al hacer scroll */
+    top: 3rem; /* Distancia del borde superior */
+    padding-right: 2rem;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between; /* Espacia el contenido verticalmente */
+    height: fit-content; /* Ajusta la altura al contenido */
+}
+
+.name {
+    font-size: 3rem; /* Tamaño de fuente grande para el nombre */
+    color: var(--text-color-primary);
+    margin-bottom: 0.5rem;
+    font-weight: 700;
+}
+
+.title {
+    font-size: 1.5rem;
+    color: var(--text-color-primary);
+    margin-bottom: 1rem;
+    font-weight: 500;
+}
+
+
+/* Navegación Principal */
+.main-nav {
+    margin-bottom: 3rem;
+}
+
+.nav-link {
+    display: flex;
+    align-items: center;
+    font-size: 0.8rem;
+    font-weight: 600;
+    letter-spacing: 0.1em;
+    padding: 0.5rem 0;
+    color: var(--text-color-tertiary);
+    transition: color 0.3s ease;
+    text-transform: uppercase;
+}
+
+.nav-link:hover, .nav-link.active {
+    color: var(--text-color-primary);
+}
+
+.nav-link .line {
+    width: 25px; /* Ancho de la línea */
+    height: 1px;
+    background-color: var(--text-color-tertiary);
+    margin-right: 0.75rem;
+    transition: background-color 0.3s ease, width 0.3s ease;
+}
+
+.nav-link.active .line {
+    width: 60px; /* Línea más larga para el activo */
+    background-color: var(--text-color-primary);
+}
+
+.nav-link:hover .line {
+    background-color: var(--text-color-primary);
+    width: 60px; /* Línea más larga al pasar el ratón */
+}
+
+/* Íconos Sociales */
+.social-links {
+    display: flex;
+    gap: 1.5rem; /* Espacio entre íconos */
+    margin-top: 3rem; /* Espacio superior */
+}
+
+.social-links a {
+    font-size: 1.5rem;
+    color: var(--social-icon-color);
+    transition: color 0.3s ease;
+}
+
+.social-links a:hover {
+    color: var(--text-color-primary);
+    transform: translateY(-3px); /* Pequeño efecto de levantamiento */
+}
+
+/* Columna Derecha (Contenido) */
+.content-right {
+    padding-top: 3rem; /* Ajusta el padding superior para alinear con el texto de la izquierda */
+}
+
+.content-right p {
+    margin-bottom: 1.5rem;
+    font-size: 1rem;
+    line-height: 1.7;
+    color: var(--text-color-secondary);
+}
+
+.content-right p:last-child {
+    margin-bottom: 0;
+}
+
+.highlight {
+    color: var(--accent-color); /* Color de acento para texto resaltado */
+    font-weight: 600;
+}
+
+/* Responsive Design */
+@media (max-width: 992px) {
+    .main-layout {
+        grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
+        gap: 2rem;
+        padding: 2rem;
+    }
+
+    .sidebar-left {
+        position: static; /* No sticky en pantallas pequeñas */
+        padding-right: 0;
+        text-align: center; /* Centrar elementos en móvil */
+    }
+
+    .name, .title, .tagline {
+        text-align: center;
+    }
+
+    .main-nav {
+        display: none; /* Opcional: ocultar la nav principal en móvil si no quieres un menú hamburguesa */
+    }
+
+    .social-links {
+        justify-content: center; /* Centrar íconos en móvil */
+        margin-bottom: 2rem;
+    }
+
+    .content-right {
+        padding-top: 0; /* Eliminar padding superior extra */
+    }
+}

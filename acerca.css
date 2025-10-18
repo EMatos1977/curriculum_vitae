@@ -1,0 +1,50 @@
+body{
+    color: inherit;
+    background-color: #0d1117;
+
+}
+.acercademi{
+    color: white;
+    text-align: center;
+    font-size: 80px;
+    margin-top:5px;
+    text-decoration: underline;
+    
+}
+
+.profesion{
+    text-align:center;
+    color:rgb(111, 120, 240) ;
+    font-size: 40px;
+    margin-top: 2px;
+    text-decoration: underline;
+      
+    
+}
+.acercademiparrafo{
+    color: white;
+    font-size: 25px;
+    line-height: 45px;
+    text-indent: 20px;
+
+}
+.retorno{
+    color: rgb(223, 248, 34);
+    font-size: 15px;
+    
+    
+}
+.fotoAcerca{
+    width: 200px;
+    height: 320px;
+    padding: 60px;
+    display: flex;
+    text-align: center;
+    margin: auto;
+    display: block;
+}
+
+
+
+  
+

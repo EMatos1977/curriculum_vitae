@@ -1,0 +1,37 @@
+.construccion{
+    width: 300px;
+    height: auto; /*Mantiene la proporcion original*/
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    position: relative;
+    top: 450px;
+
+
+}
+
+.aviso-construccion {
+    /* Posicionamiento y Apariencia */
+
+    position: fixed; /* Hace que se quede fijo al hacer scroll */
+    top: 0; /* Lo coloca en la parte superior */
+    left: 0;
+    width: 100%; /* Ocupa todo el ancho */
+    z-index: 1000; /* Asegura que esté por encima de todo */
+    background-color: #ffcc00; /* Color de fondo llamativo (amarillo/naranja) */
+    color: #333; /* Color de texto oscuro */
+    padding: 10px 20px;
+    text-align: center;
+    font-weight: bold;
+    font-size: 55px;
+    box-shadow: 0 2px 5px rgba(0,0,0,0.2); /* Sombra sutil */
+}
+
+/* Estilo para el texto dentro del aviso */
+.aviso-construccion p {
+    margin: 0; /* Elimina el margen por defecto del párrafo */
+}
+
+.atencion{
+    font-size: 95px;
+}
