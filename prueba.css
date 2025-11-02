@@ -160,33 +160,72 @@ body {
 }
 
 /* Responsive Design */
+/* --- Media Query para Dispositivos con Ancho Máximo de 992px --- */
 @media (max-width: 992px) {
+    /* 1. Layout: Vuelve a una sola columna */
     .main-layout {
         grid-template-columns: 1fr; /* Una columna en pantallas pequeñas */
-        gap: 2rem;
-        padding: 2rem;
+        gap: 3rem; /* Aumenta un poco el espacio entre la "sidebar" y el contenido */
+        max-width: 100%; /* Ocupa todo el ancho disponible */
+        width: 100%;
+        padding: 2rem; /* Agrega padding a los lados para que no se pegue al borde */
     }
 
+    /* 2. Columna Izquierda (Sidebar): Ajustes de posición y contenido */
     .sidebar-left {
-        position: static; /* No sticky en pantallas pequeñas */
+        position: static; /* NO sticky en pantallas pequeñas */
         padding-right: 0;
-        text-align: center; /* Centrar elementos en móvil */
+        text-align: center; 
+        display: block; /* Vuelve a ser un bloque normal */
+        height: auto;
     }
 
+    /* 3. IMAGEN DE PERFIL: Fundamental para móviles */
+    .imagen {
+        width: 150px; /* Reduce el tamaño en móviles */
+        height: auto;
+        padding: 0; /* Elimina el padding excesivo que tenías */
+        border-radius: 50%; /* Hace que la foto sea redonda si lo deseas (opcional) */
+        margin: 0 auto 1.5rem auto; /* Centra la imagen y da espacio abajo */
+        display: block;
+    }
+
+    /* 4. Títulos y Tagline: Se centran bien */
     .name, .title, .tagline {
         text-align: center;
+        margin-bottom: 1rem;
     }
-
+    
+    /* 5. Navegación: Cambia el estilo para ahorrar espacio */
     .main-nav {
-        display: none; /* Opcional: ocultar la nav principal en móvil si no quieres un menú hamburguesa */
-    }
-
-    .social-links {
-        justify-content: center; /* Centrar íconos en móvil */
+        display: flex; /* Ahora muestra los enlaces en fila */
+        flex-wrap: wrap; /* Permite que los enlaces pasen a otra línea si no caben */
+        justify-content: center; /* Centra los enlaces */
         margin-bottom: 2rem;
     }
-
-    .content-right {
-        padding-top: 0; /* Eliminar padding superior extra */
+    
+    .nav-link {
+        /* Se usa un diseño más compacto para enlaces en móvil */
+        font-size: 0.75rem;
+        padding: 0.5rem 0.8rem;
+        border: 1px solid var(--text-color-tertiary); /* Agrega un borde para simular un botón */
+        border-radius: 4px;
+        margin: 0.3rem; /* Espacio entre "botones" */
     }
+
+    .nav-link .line {
+        display: none; /* Oculta las líneas decorativas para ahorrar espacio en móvil */
+    }
+
+    /* 6. Enlaces Sociales: Solo asegúrate de que estén centrados */
+    .social-links {
+        justify-content: center; /* Centrar íconos en móvil */
+        margin-top: 1.5rem;
+    }
+
+    /* 7. Contenido Derecho: Se adapta sin problemas */
+    .content-right {
+        padding-top: 0; 
+    }
+
 }
